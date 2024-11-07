@@ -21,7 +21,7 @@ export default function Hero() {
     return null;
   }
   return (
-    <section className="relative z-10 min-h-screen flex items-center justify-center overflow-hidden __className_1deade">
+    <section id ="Hero" className="relative z-10 min-h-screen flex items-center justify-center overflow-hidden __className_1deade">
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black" />

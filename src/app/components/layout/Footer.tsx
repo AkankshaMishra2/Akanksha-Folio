@@ -121,7 +121,7 @@ const AwesomeContact = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-purple-900/20 py-20 px-4">
+    <div id ="contact" className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-purple-900/20 py-20 px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

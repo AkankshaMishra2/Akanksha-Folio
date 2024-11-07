@@ -46,7 +46,7 @@ export default function Component() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white p-6 md:p-12 flex items-center justify-center">
+    <div id = "projects"className="min-h-screen bg-black text-white p-6 md:p-12 flex items-center justify-center">
       <div className="max-w-7xl w-full">
         <div className="flex items-center gap-2 mb-8">
           <div className="w-2 h-2 bg-white rounded-full" />

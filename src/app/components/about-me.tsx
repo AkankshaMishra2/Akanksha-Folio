@@ -38,7 +38,8 @@ export function AboutMe() {
   }
 
   return (
-    <motion.div
+    <div id="about">
+    <motion.div 
       ref={ref}
       initial="hidden"
       animate={controls}
@@ -88,6 +89,7 @@ export function AboutMe() {
         </motion.div>
       </div>
     </motion.div>
+    </div>
   )
 }
 
