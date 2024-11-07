@@ -18,7 +18,7 @@ function Logo() {
       <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-500 rounded-sm transform rotate-45 flex items-center justify-center overflow-hidden">
         <span className="text-white font-bold text-lg transform -rotate-45">A</span>
       </div>
-      <span className="text-xl font-light tracking-wider bg-gradient-to-r from-purple-400 to-blue-500 text-transparent bg-clip-text">AKANKSHA</span>
+      <span className="text-xl font-light tracking-wider bg-gradient-to-r from-purple-400 to-blue-500 text-transparent bg-clip-text">KANKSHA</span>
     </div>
   )
 }
