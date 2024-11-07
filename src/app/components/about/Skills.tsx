@@ -27,14 +27,14 @@ const courses = [
     title: 'Operating Systems',
     description:
       'Gain a deep understanding of operating system concepts, including process management, memory management, and file systems.',
-    href: '/courses/operating-systems',
+    href: 'https://www.geeksforgeeks.org/operating-systems/',
     imageUrl: '/images/operating-systems.jpg',
   },
   {
     title: 'Python Programming',
     description:
       'Learn the fundamentals of Python programming, including data structures, control flow, and object-oriented programming.',
-    href: '/courses/python-programming',
+    href: 'https://www.geeksforgeeks.org/python-programming-language-tutorial/',
     imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpython-masterclass-course%2F&psig=AOvVaw3Iqe_Y1bpibSUAPuLN84_b&ust=1731073851438000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPCssOGuyokDFQAAAAAdAAAAABAJ',
   },
   {
@@ -42,27 +42,27 @@ const courses = [
     description:
       'Explore the principles of computer networking, including protocols, topologies, and network security.',
     href: '/courses/computer-networks',
-    imageUrl: '/images/computer-networks.jpg',
+    imageUrl: 'https://www.geeksforgeeks.org/computer-network-tutorials/',
   },
   {
     title: 'Object-Oriented Programming',
     description:
       'Dive into the world of object-oriented programming, learning concepts like encapsulation, inheritance, and polymorphism.',
-    href: '/courses/object-oriented-programming',
+    href: 'https://www.geeksforgeeks.org/c-plus-plus/',
     imageUrl: '/images/object-oriented-programming.jpg',
   },
   {
     title: 'C/C++ Programming',
     description:
       'Master the C and C++ programming languages, developing skills in low-level programming and system design.',
-    href: '/courses/c-cpp-programming',
+    href: 'https://www.geeksforgeeks.org/c-plus-plus/',
     imageUrl: '/images/c-cpp-programming.jpg',
   },
   {
     title: 'Embedded Systems & IoT',
     description:
       'Discover the world of embedded systems and the Internet of Things, learning to design and develop IoT applications.',
-    href: '/courses/embedded-systems-iot',
+    href: 'https://www.geeksforgeeks.org/introduction-to-internet-of-things-iot-set-1/',
     imageUrl: '/images/embedded-systems-iot.jpg',
   },
 ];
