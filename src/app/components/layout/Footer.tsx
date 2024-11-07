@@ -8,7 +8,8 @@ import {
   Check,
   ExternalLink,
   X,
-  Linkedin
+  Linkedin,
+  Phone
 } from 'lucide-react';
 
 const AwesomeContact = () => {
@@ -16,6 +17,7 @@ const AwesomeContact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: ''
   });
   const [toast, setToast] = useState({ show: false, message: '' });
@@ -44,7 +46,8 @@ const AwesomeContact = () => {
       color: "hover:text-blue-600",
       handle: "Akanksha Mishra",
       bgHover: "group-hover:bg-blue-600/10"
-    }
+    },
+    
   ];
 
   const showToast = (message: string) => {
@@ -62,7 +65,7 @@ const AwesomeContact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     showToast('Message sent successfully!');
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
   const TiltCard = ({ children, className }: { children: React.ReactNode, className?: string }) => {
@@ -166,6 +169,15 @@ const AwesomeContact = () => {
                   />
                 </div>
                 <div>
+                  <input
+                    type="tel"
+                    placeholder="Your Phone"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    className="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
+                  />
+                </div>
+                <div>
                   <textarea
                     placeholder="Tell me about your project idea..."
                     value={formData.message}
@@ -195,12 +207,12 @@ const AwesomeContact = () => {
               <div className="space-y-4 mb-8">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  onClick={() => handleCopy('your.email@example.com', 'email')}
+                  onClick={() => handleCopy('akankshamishra20042@gmail.com', 'email')}
                   className="p-4 rounded-lg bg-cyan-500/5 border border-cyan-500/20 flex items-center justify-between cursor-pointer group"
                 >
                   <div className="flex items-center gap-3">
                     <Mail className="w-6 h-6 text-cyan-500" />
-                    <span className="text-gray-300">your.email@example.com</span>
+                    <span className="text-gray-300">akankshamishra20042@gmail.com</span>
                   </div>
                   {copied === 'email' ? (
                     <Check className="text-green-500" />
@@ -208,35 +220,46 @@ const AwesomeContact = () => {
                     <Copy className="text-gray-400 group-hover:text-cyan-500" />
                   )}
                 </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  onClick={() => handleCopy('+1 (234) 567-890', 'phone')}
+                  className="p-4 rounded-lg bg-cyan-500/5 border border-cyan-500/20 flex items-center justify-between cursor-pointer group"
+                >
+                  <div className="flex items-center gap-3">
+                    <Phone className="w-6 h-6 text-cyan-500" />
+                    <span className="text-gray-300">+91 86991 80209</span>
+                  </div>
+                  {copied === 'phone' ? (
+                    <Check className="text-green-500" />
+                  ) : (
+                    <Copy className="text-gray-400 group-hover:text-cyan-500" />
+                  )}
+                </motion.div>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex flex-wrap items-center justify-center gap-6">
+                {socialLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-4 rounded-lg bg-gray-900/50 border border-gray-800 flex items-center gap-2 ${link.color} ${link.bgHover} transition-colors`}
+                  >
+                    {link.icon}
+                    <span className="text-gray-400">{link.label}</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                ))}
               </div>
             </div>
           </TiltCard>
         </div>
 
-        {/* Social Links */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="flex flex-wrap items-center justify-center gap-6"
-        >
-          {socialLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`p-4 rounded-lg bg-gray-900/50 border border-gray-800 flex items-center gap-2 ${link.color} ${link.bgHover} transition-colors`}
-            >
-              {link.icon}
-              <span className="text-gray-400">{link.label}</span>
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          ))}
-        </motion.div>
+        {/* Toast Notification */}
+        {toast.show && <Toast />}
       </motion.div>
-
-      {/* Toast Notification */}
-      {toast.show && <Toast />}
     </div>
   );
 };

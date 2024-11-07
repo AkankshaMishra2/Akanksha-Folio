@@ -28,39 +28,44 @@ const courses = [
     description:
       'Gain a deep understanding of operating system concepts, including process management, memory management, and file systems.',
     href: '/courses/operating-systems',
+    imageUrl: '/images/operating-systems.jpg',
   },
   {
     title: 'Python Programming',
     description:
       'Learn the fundamentals of Python programming, including data structures, control flow, and object-oriented programming.',
     href: '/courses/python-programming',
+    imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpython-masterclass-course%2F&psig=AOvVaw3Iqe_Y1bpibSUAPuLN84_b&ust=1731073851438000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPCssOGuyokDFQAAAAAdAAAAABAJ',
   },
   {
     title: 'Computer Networks',
     description:
       'Explore the principles of computer networking, including protocols, topologies, and network security.',
     href: '/courses/computer-networks',
+    imageUrl: '/images/computer-networks.jpg',
   },
   {
     title: 'Object-Oriented Programming',
     description:
       'Dive into the world of object-oriented programming, learning concepts like encapsulation, inheritance, and polymorphism.',
     href: '/courses/object-oriented-programming',
+    imageUrl: '/images/object-oriented-programming.jpg',
   },
   {
     title: 'C/C++ Programming',
     description:
       'Master the C and C++ programming languages, developing skills in low-level programming and system design.',
     href: '/courses/c-cpp-programming',
+    imageUrl: '/images/c-cpp-programming.jpg',
   },
   {
     title: 'Embedded Systems & IoT',
     description:
       'Discover the world of embedded systems and the Internet of Things, learning to design and develop IoT applications.',
     href: '/courses/embedded-systems-iot',
+    imageUrl: '/images/embedded-systems-iot.jpg',
   },
 ];
-
 const SkillsSection = () => {
   return (
     <div className="__className_1deade bg-black text-white py-20">
@@ -97,15 +102,16 @@ const SkillsSection = () => {
 
         <h2 className="text-3xl font-bold text-white mb-8">Courses Done</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {courses.map((course, index) => (
-            <AnimatedPinDemo
-              key={index}
-              title={course.title}
-              description={course.description}
-              href={course.href}
-            />
-          ))}
-        </div>
+  {courses.map((course, index) => (
+    <AnimatedPinDemo
+      key={index}
+      title={course.title}
+      description={course.description}
+      href={course.href}
+      imageUrl={course.imageUrl}
+    />
+  ))}
+</div>
       </div>
     </div>
   );
