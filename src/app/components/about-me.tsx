@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion, useAnimation } from 'framer-motion'
@@ -62,6 +60,15 @@ export function AboutMe() {
               <Skill title="C/C++" />
               <Skill title="Python" />
               <Skill title="Git & GitHub" />
+            </ul>
+          </motion.div>
+          <motion.div className="mt-6" variants={itemVariants}>
+            <h3 className="text-2xl font-semibold text-white mb-3">Achievements</h3>
+            <ul className="grid grid-cols-2 gap-2">
+              <Skill title="4th Position in HackIndia Nationals" />
+              <Skill title="2nd Position in Avinya 2.0" />
+              <Skill title="Participated in Makethon" />
+              <Skill title="One of the Top Project Teams in 1st Year" />
             </ul>
           </motion.div>
         </motion.div>
